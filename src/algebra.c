@@ -16,7 +16,7 @@ Matrix add_matrix(Matrix a, Matrix b)
     Matrix c;
     if (a.rows != b.rows || a.cols != b.cols) {
         printf("Error: matrices are not the same size\n");
-        exit(1);
+        return create_matrix(0, 0);
     }
     c.rows = a.rows;
     c.cols = a.cols;
@@ -24,7 +24,7 @@ Matrix add_matrix(Matrix a, Matrix b)
         for (j = 0; j < a.cols; j++) {
             c.data[i][j] = a.data[i][j] + b.data[i][j];
         }
-    }return create_matrix(0, 0);
+    }
     return c;
 }
 
