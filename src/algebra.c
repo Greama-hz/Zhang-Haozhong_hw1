@@ -15,7 +15,7 @@ Matrix add_matrix(Matrix a, Matrix b)
     int i, j;
     Matrix c;
     if (a.rows != b.rows || a.cols != b.cols) {
-        printf("Error: matrices are not the same size\n");
+        printf("Error: Matrix a and b must have the same rows and cols.\n");
         return create_matrix(0, 0);
     }
     c.rows = a.rows;
@@ -33,7 +33,7 @@ Matrix sub_matrix(Matrix a, Matrix b)
     int i, j;
     Matrix c;
     if (a.rows != b.rows || a.cols != b.cols) {
-        printf("Error: matrices are not the same size\n");
+        printf("Error: Matrix a and b must have the same rows and cols.\n");
         return create_matrix(0, 0);
     }
     else
@@ -58,7 +58,7 @@ Matrix mul_matrix(Matrix a, Matrix b)
     c.cols = b.cols;
     if(a.cols!= b.rows) 
     {
-        printf("Error: Matrix a and b must have the same rows and cols.\n");
+        printf("Error: The number of cols of matrix a must be equal to the number of rows of matrix b.\n");
         return create_matrix(0, 0);
     }
     for(i = 0; i < c.rows; i++) {
