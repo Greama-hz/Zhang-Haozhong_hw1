@@ -24,7 +24,7 @@ Matrix add_matrix(Matrix a, Matrix b)
         for (j = 0; j < a.cols; j++) {
             c.data[i][j] = a.data[i][j] + b.data[i][j];
         }
-    }
+    }return create_matrix(0, 0);
     return c;
 }
 
